@@ -26,7 +26,10 @@ namespace TechnoFusionTask
 			int len = arr.Length;
 			int[] temp = new int[len];
             int j = 0;
-
+            if (len==0||len==1)
+            {
+                return arr;
+            }
             //to create array with unique elements
             for (int i = 0; i < len-1; i++)
                 if (arr[i] != arr[i + 1])
@@ -50,6 +53,7 @@ namespace TechnoFusionTask
 
             Console.WriteLine("Task 1");
             int num = 2,count=0;
+
 			long sum = 0;
 			while (count < 1000)
 			{
@@ -69,7 +73,7 @@ namespace TechnoFusionTask
             #region Task2
 
             Console.WriteLine("Task 2");
-			int[] arr1 = new int[] { 2, 3, 6, 6, 8, 9, 10, 10, 10, 12, 12 };
+			int[] arr1 = new int[] { };
 			int[] arr2 = deleteDuplicate(arr1);
             for (int i = 0; i < arr2.Length; i++)
             {
